@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="Lessons.Lesson2.Example"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pivot="clr-namespace:ExtendedPivotViewer;assembly=ExtendedPivotViewer"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <Style TargetType="pivot:ExtendedPivotViewer">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Opacity="0.3" ShadowDepth="3" BlurRadius="3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Name="InfoPanelStyle" TargetType="Border">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Opacity="0.3" ShadowDepth="3" BlurRadius="3"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Background" Value="#FFf5f7f9"/>
+            <Setter Property="BorderBrush" Value="#FFd3d4d4"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <Style x:Name="InfoPanelContainerStyle" TargetType="StackPanel">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style x:Name="InfoPanelSectionStyle" TargetType="StackPanel">
+            <Setter Property="Margin" Value="0,0,0,20"/>
+        </Style>
+        <Style x:Name="InfoScrollStyle" TargetType="ScrollViewer">
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="260"/>
+        </Grid.ColumnDefinitions>
+        <pivot:ExtendedPivotViewer x:Name="pvLesson2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+        <Border Grid.Column="1" Style="{StaticResource InfoPanelStyle}">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Style="{StaticResource InfoPanelContainerStyle}">
+
+                    <StackPanel Style="{StaticResource InfoPanelSectionStyle}">
+                        <TextBlock Text="Activate Custom Actions"/>
+                        <CheckBox x:Name="cbSample1Action" Content="'Sample 1' Custom Action" Click="cbSample1Action_Checked" IsChecked="True"/>
+                        <CheckBox x:Name="cbSample2Action" Content="'Sample 2' Custom Action" Click="cbSample2Action_Checked"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource InfoPanelSectionStyle}">
+                        <TextBlock Text="Action Selection"/>
+                        <ListBox Height="100" ItemsSource="{Binding Events}"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </ScrollViewer>
+        </Border>
+    </Grid>
+
+</UserControl>
