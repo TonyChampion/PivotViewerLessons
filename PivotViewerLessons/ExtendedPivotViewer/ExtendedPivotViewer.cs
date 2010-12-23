@@ -194,6 +194,29 @@ namespace ExtendedPivotViewer
         }
         #endregion
 
+        #region Custom Loading Visual
+        public void SetLoadingVisual(UserControl newLoading)
+        {
+            Grid cont = LoadingVisualContainer;
+            newLoading.Name = "PART_LoadingVisual";
+
+            cont.VerticalAlignment = VerticalAlignment.Stretch;
+            cont.HorizontalAlignment = HorizontalAlignment.Stretch;
+            cont.Children.RemoveAt(0);
+            cont.Children.Add(newLoading);
+
+        }
+
+        public UIElement CurrentLoadingVisual
+        {
+            get
+            {
+                return LoadingVisualContainer.Children[0];
+            }
+        }
+
+        #endregion
+
         public static readonly DependencyProperty FilterPaneSettingsProperty = DependencyProperty.Register(
            "FilterPaneSettings",
            typeof(FilterPaneSettings),
@@ -206,6 +229,18 @@ namespace ExtendedPivotViewer
             get { return (FilterPaneSettings)GetValue(FilterPaneSettingsProperty); }
             set { SetValue(FilterPaneSettingsProperty, value); }
         }
+        #endregion
+
+        #region InfoPane Methods
+
+        public void SetInfoPaneScrollerData(UserControl newPane)
+        {
+            ScrollViewer scroll = (ScrollViewer)InfoPaneView.FindName("ScrollRoot");
+            scroll.Content = newPane;
+//            ScrollContentPresenter pres = (ScrollContentPresenter)InfoPaneView.FindName("ScrollContentPresenter");
+//            pres.Content = newPane;
+        }
+
         #endregion
 
         #region Access to Internal PivotViewer Components
@@ -279,6 +314,14 @@ namespace ExtendedPivotViewer
             get
             {
                 return (Rectangle)((Grid)FilterPaneView.FindName("FilterPaneRoot")).Children[0];
+            }
+        }
+
+        public Grid LoadingVisualContainer
+        {
+            get
+            {
+                return (Grid)CollectionViewGrid.Children[3];
             }
         }
         #endregion

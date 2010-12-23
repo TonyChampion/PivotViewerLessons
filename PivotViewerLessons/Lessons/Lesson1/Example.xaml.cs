@@ -49,6 +49,7 @@ namespace Lessons.Lesson1
 
         void pvLesson1_Loaded(object sender, RoutedEventArgs e)
         {
+           // pvLesson1.LoadCollection("http://localhost:123/ClientBin/MIXCollection.cxml", "");
             pvLesson1.LoadCollection("http://content.getpivot.com/Collections/2009nflteams/2009nflteams.cxml", "");
         }
 

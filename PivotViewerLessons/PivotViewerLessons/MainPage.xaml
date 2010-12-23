@@ -47,10 +47,13 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Border Style="{StaticResource SectionBorder}">
-                <ListBox x:Name="lstLessons" Margin="3" BorderBrush="Transparent" SelectionChanged="lstLessons_SelectionChanged" ItemsSource="{Binding}" Background="Transparent">
+                <ListBox x:Name="lstLessons" Margin="3" BorderBrush="Transparent" SelectionChanged="lstLessons_SelectionChanged" ItemsSource="{Binding Lessons}" Background="Transparent">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Title}"/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding LessonNumber, StringFormat='0\.'}" HorizontalAlignment="Right" Width="10" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding Title}" Margin="2,0,0,05"/>
+                            </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>

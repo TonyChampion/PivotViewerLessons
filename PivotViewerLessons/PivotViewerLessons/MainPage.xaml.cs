@@ -21,19 +21,14 @@ namespace PivotViewerLessons
 {
     public partial class MainPage : UserControl
     {
+        MainPageViewModel _viewModel;
+
         public MainPage()
         {
             InitializeComponent();
 
-            CompositionInitializer.SatisfyImports(this);
-
-        }
-
-        [ImportMany()]
-        public ILesson[] Lessons
-        {
-            set { DataContext = value; }
-
+            _viewModel = new MainPageViewModel();
+            DataContext = _viewModel;
         }
 
         private void lstLessons_SelectionChanged(object sender, SelectionChangedEventArgs e)
