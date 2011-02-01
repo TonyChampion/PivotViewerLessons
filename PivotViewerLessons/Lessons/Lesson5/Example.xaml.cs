@@ -37,7 +37,7 @@ namespace Lessons.Lesson5
         {
             _custInfoPane = new CustomInfoPane();
             pvLesson5.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(pvLesson5_PropertyChanged);
-            pvLesson5.LoadCollection("http://content.getpivot.com/Collections/2009nflteams/2009nflteams.cxml", "");
+            pvLesson5.LoadCollection("http://labs.championds.com/MIX10/MIX10Collection.cxml", "");
         }
 
         void pvLesson5_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

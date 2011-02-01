@@ -31,7 +31,7 @@ namespace Lessons.Lesson3
 
         void pvLesson3_Loaded(object sender, RoutedEventArgs e)
         {
-            pvLesson3.LoadCollection("http://content.getpivot.com/Collections/2009nflteams/2009nflteams.cxml", "");
+            pvLesson3.LoadCollection("http://labs.championds.com/MIX10/MIX10Collection.cxml", "");
         }
 
         private void cbBackground_SelectionChanged(object sender, SelectionChangedEventArgs e)

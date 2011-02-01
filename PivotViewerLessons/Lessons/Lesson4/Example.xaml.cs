@@ -38,7 +38,7 @@ namespace Lessons.Lesson4
         void Example_Loaded(object sender, RoutedEventArgs e)
         {
             pvLesson4.IsEnabled = false;
-            pvLesson4.LoadCollection("http://content.getpivot.com/Collections/sportsillustrated/sportsillustrated.cxml", "");
+            pvLesson4.LoadCollection("http://labs.championds.com/MIX10/MIX10Collection.cxml", "");
         }
 
         int cnt = 0;

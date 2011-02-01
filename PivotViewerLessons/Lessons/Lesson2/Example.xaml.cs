@@ -69,7 +69,7 @@ namespace Lessons.Lesson2
 
         void pvLesson2_Loaded(object sender, RoutedEventArgs e)
         {
-            pvLesson2.LoadCollection("http://content.getpivot.com/Collections/2009nflteams/2009nflteams.cxml", "");
+            pvLesson2.LoadCollection("http://labs.championds.com/MIX10/MIX10Collection.cxml", "");
             pvLesson2.RegisterCustomActionDelegate(sample1Delegate);
         }
 
