@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lessons", "Lessons\Lessons.csproj", "{8D919711-E2E6-401E-A68E-35146E804E12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotViewerLessons", "PivotViewerLessons\PivotViewerLessons.csproj", "{8381FE1E-63FC-4E77-B1CC-8629B2EDD6EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendedPivotViewer", "ExtendedPivotViewer\ExtendedPivotViewer.csproj", "{35DDC289-87F2-49BB-9F8A-977B727572AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{1A2FEDFD-9EA4-4165-9EF3-2706F55E8257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotViewerLessons.Web", "PivotViewerLessons.Web\PivotViewerLessons.Web.csproj", "{7378DFF1-A504-4B3F-9EB3-59C7815C3EA5}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs02
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ExtendedPivotViewer\\ExtendedPivotViewer.csproj
+		SccProjectTopLevelParentUniqueName1 = PivotViewerLessons.sln
+		SccProjectName1 = ExtendedPivotViewer
+		SccLocalPath1 = ExtendedPivotViewer
+		SccProjectUniqueName2 = Lessons\\Lessons.csproj
+		SccProjectTopLevelParentUniqueName2 = PivotViewerLessons.sln
+		SccProjectName2 = Lessons
+		SccLocalPath2 = Lessons
+		SccProjectUniqueName3 = PivotViewerLessons.Web\\PivotViewerLessons.Web.csproj
+		SccProjectName3 = PivotViewerLessons.Web
+		SccLocalPath3 = PivotViewerLessons.Web
+		SccProjectUniqueName4 = PivotViewerLessons\\PivotViewerLessons.csproj
+		SccProjectTopLevelParentUniqueName4 = PivotViewerLessons.sln
+		SccProjectName4 = PivotViewerLessons
+		SccLocalPath4 = PivotViewerLessons
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D919711-E2E6-401E-A68E-35146E804E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D919711-E2E6-401E-A68E-35146E804E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D919711-E2E6-401E-A68E-35146E804E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D919711-E2E6-401E-A68E-35146E804E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8381FE1E-63FC-4E77-B1CC-8629B2EDD6EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8381FE1E-63FC-4E77-B1CC-8629B2EDD6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8381FE1E-63FC-4E77-B1CC-8629B2EDD6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8381FE1E-63FC-4E77-B1CC-8629B2EDD6EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35DDC289-87F2-49BB-9F8A-977B727572AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35DDC289-87F2-49BB-9F8A-977B727572AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35DDC289-87F2-49BB-9F8A-977B727572AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35DDC289-87F2-49BB-9F8A-977B727572AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7378DFF1-A504-4B3F-9EB3-59C7815C3EA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7378DFF1-A504-4B3F-9EB3-59C7815C3EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7378DFF1-A504-4B3F-9EB3-59C7815C3EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7378DFF1-A504-4B3F-9EB3-59C7815C3EA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8381FE1E-63FC-4E77-B1CC-8629B2EDD6EF} = {1A2FEDFD-9EA4-4165-9EF3-2706F55E8257}
+		{35DDC289-87F2-49BB-9F8A-977B727572AC} = {1A2FEDFD-9EA4-4165-9EF3-2706F55E8257}
+		{8D919711-E2E6-401E-A68E-35146E804E12} = {1A2FEDFD-9EA4-4165-9EF3-2706F55E8257}
+	EndGlobalSection
+EndGlobal

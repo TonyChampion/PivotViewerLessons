@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="PivotViewerLessons.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <Style x:Key="Header" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Margin" Value="15,2,2,2"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#FFFBFC4A" ShadowDepth="0" BlurRadius="15" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="SectionBorder" TargetType="Border">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Opacity="0.4" />
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFf6f5f4" Offset="0" />
+                        <GradientStop Color="#FFdfdbd2" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="CornerRadius" Value="5"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" AllowDrop="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <TextBlock Text="PivotViewer Lessons" Style="{StaticResource Header}" FontStyle="Normal" Foreground="White" FontWeight="Medium" />
+        </Grid>
+        <Grid Grid.Row="1" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Style="{StaticResource SectionBorder}">
+                <ListBox x:Name="lstLessons" Margin="3" BorderBrush="Transparent" SelectionChanged="lstLessons_SelectionChanged" ItemsSource="{Binding Lessons}" Background="Transparent">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding LessonNumber, StringFormat='0\.'}" HorizontalAlignment="Right" Width="10" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding Title}" Margin="2,0,0,05"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+            <Border Style="{StaticResource SectionBorder}" Grid.Column="1">
+
+                <Grid Margin="5" x:Name="gridContainer">
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF585451" Offset="0" />
+                <GradientStop Color="#FF958B81" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
+</UserControl>
