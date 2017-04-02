@@ -1,9 +1,13 @@
+Migrating from CodePlex
+
 *Project Description*
-{project:description}
+The Silverlight PivotViewer is a great control with a great deal of potential. However, there are a lot of questions on how to use and customize the PivotViewer. This project will attempt to answer those questions by providing a series of lessons on the PivotViewer.
 
-The first batch of lessons have been posted.  A series on these lessons will be coming soon to [url:http://tonychampion.net].
+The first batch of lessons have been posted. A series on these lessons will be coming soon to http://tonychampion.net.
 
-*Live version of the current version can be found here : [url:http://pivotviewer.championds.com].*
+The first batch of lessons have been posted.  A series on these lessons will be coming soon to http://tonychampion.net.
+
+*Live version of the current version can be found here : http://pivotviewer.championds.com.*
 
 *Lesson Details*
 * Lesson 1 : Basic Properties and Events
